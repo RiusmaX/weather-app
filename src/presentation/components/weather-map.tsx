@@ -20,8 +20,6 @@ import {
   Eye, 
   Settings,
   Info,
-  ToggleLeft,
-  ToggleRight,
   Sliders
 } from 'lucide-react';
 
@@ -159,9 +157,6 @@ export function WeatherMap({ location, className }: WeatherMapProps) {
       
       weatherLayer.addTo(mapInstanceRef.current);
       layerInstancesRef.current[layerType] = weatherLayer;
-      
-      // Log pour debug
-      console.log(`Couche ${layerType} ajoutée avec opacité ${opacity}`);
     }
   }, []);
 

@@ -39,7 +39,6 @@ export class GeolocationService implements LocationRepository {
         async (position) => {
           try {
             const { latitude, longitude } = position.coords;
-            console.log(`Géolocalisation réussie: ${latitude}, ${longitude}`);
             const location = await this.getLocationFromCoordinates(latitude, longitude);
             resolve(location);
           } catch (error) {
@@ -61,7 +60,6 @@ export class GeolocationService implements LocationRepository {
               break;
           }
           
-          console.warn('Erreur de géolocalisation:', errorMessage);
           reject(new Error(errorMessage));
         },
         {

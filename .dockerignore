@@ -1,0 +1,40 @@
+# Dépendances
+node_modules
+npm-debug.log*
+
+# Fichiers de build et cache
+.next
+out
+build
+
+# Environnement local
+.env.local
+.env
+.env*.local
+
+# Logs
+*.log
+
+# Fichiers d'OS
+.DS_Store
+Thumbs.db
+
+# Fichiers d'IDE
+.vscode
+.idea
+
+# Git
+.git
+.gitignore
+
+# Documentation
+README.md
+DEPLOYMENT.md
+
+# Tests
+coverage
+*.test.js
+
+# Divers
+*.md
+!README.md 

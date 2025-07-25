@@ -4,9 +4,9 @@
 
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { WeatherForecast } from '@/domain/entities/weather';
 import { Calendar, Wind, CloudRain } from 'lucide-react';
+import Image from 'next/image';
 import { format } from 'date-fns';
 import { fr } from 'date-fns/locale';
 
@@ -52,9 +52,11 @@ export function ForecastCard({ forecasts, className }: ForecastCardProps) {
             >
               {/* Date et icône */}
               <div className="flex items-center gap-3 flex-1">
-                <img
+                <Image
                   src={getWeatherIconUrl(forecast.condition.icon)}
                   alt={forecast.condition.description}
+                  width={48}
+                  height={48}
                   className="w-12 h-12"
                 />
                 <div>

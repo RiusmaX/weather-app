@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { CurrentWeather } from '@/domain/entities/weather';
+import Image from 'next/image';
 import { 
   Wind, 
   Droplets, 
@@ -51,10 +52,11 @@ export function WeatherCard({ weather, className }: WeatherCardProps) {
         {/* Température principale et icône */}
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <img
+            <Image
               src={getWeatherIconUrl(weather.condition.icon)}
               alt={weather.condition.description}
-              className="w-20 h-20"
+              width={80}
+              height={80}
             />
             <div>
               <div className="text-4xl font-bold">

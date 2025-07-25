@@ -198,7 +198,7 @@ export function useWeather(): UseWeatherReturn {
     return () => {
       isMounted = false;
     };
-  }, []); // Dépendances vides - ne s'exécute qu'une seule fois au montage
+  }, [services]); // Inclure services dans les dépendances pour satisfaire ESLint
 
   return {
     ...state,

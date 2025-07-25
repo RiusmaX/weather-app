@@ -121,9 +121,9 @@ export function LocationSearch({
               </div>
             )}
 
-            {!isSearching && !searchError && locations.length === 0 && query && (
+            {!isSearching && locations.length === 0 && query && (
               <div className="p-3 text-sm text-muted-foreground text-center">
-                Aucune ville trouvée pour "{query}"
+                Aucune ville trouvée pour &quot;{query}&quot;
               </div>
             )}
 
